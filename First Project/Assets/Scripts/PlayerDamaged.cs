@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDamage : MonoBehaviour
+public class PlayerDamaged : MonoBehaviour
 {
     public int damage = 20;
     public PlayerHealth playerHealth;
@@ -21,7 +21,7 @@ public class PlayerDamage : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Projectile")
         {
             playerHealth.TakeDamage(damage);
 

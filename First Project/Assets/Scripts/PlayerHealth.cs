@@ -1,29 +1,45 @@
 using UnityEngine;
-
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor.UIElements;
 public class PlayerHealth : MonoBehaviour
 {
-    public int health;
-    public int maxHealth = 100;
+
+    public float PHealth, MaxHealth = 100;
+
+    [SerializeField]
+    private PlayerHealthBarUI healthbar;
 
     void Start()
     {
-        health = maxHealth;
+        PHealth = MaxHealth;
+        healthbar.SetMaxHealth(MaxHealth);
     }
 
     void Update()
     {
-
+        healthbar.SetHealth(PHealth);
     }
 
     public void TakeDamage(int amount)
     {
-        health -= amount;
-
-        if (health <= 0)
+        PHealth -= amount;
+        SetHealth(amount);
+        if (PHealth <= 0)
         {
             Destroy(this.gameObject);
 
         }
+    }
+
+    public void SetHealth(float healthChange)
+    {
+        PHealth -= healthChange;
+        PHealth = Mathf.Clamp(PHealth, 0, MaxHealth);
+
+        healthbar.SetHealth(PHealth);
+    
+    
     }
 }
 
