@@ -21,7 +21,7 @@ public class PlayerHealthBarUI : MonoBehaviour
     }
     private void Update()
     {
-        float newWidth = Health / MaxHealth;
+        float newWidth = (Health / MaxHealth) * Width;
         healthBar.sizeDelta = new Vector2(newWidth, Height);
     }
     public void SetHealth(float health)

@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void startButton()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MainScene");
     }
     public void settingsButton()
     { 

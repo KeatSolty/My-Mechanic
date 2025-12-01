@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 
     public GameObject spawnpoint;
 
-    public float health;
+    //public float health;
 
     //Patroling
     public Vector3 walkPoint;
@@ -83,7 +83,6 @@ public class Enemy : MonoBehaviour
             ///Attack code here
             Rigidbody rb = Instantiate(projectile, spawnpoint.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
 
             ///
@@ -99,13 +98,13 @@ public class Enemy : MonoBehaviour
      alreadyAttacked = false;
     }
 
-    public void TakeDamage(int damage)
-    { 
-    health -=damage;
-        if (health <= 0) Invoke(nameof(DestroyEnemy), .5f);
-    }
-    public void DestroyEnemy()
-    { 
-     Destroy(gameObject);
-    }
+    //public void TakeDamage(int damage)
+    //{ 
+    //health -=damage;
+    //    if (health <= 0) Invoke(nameof(DestroyEnemy), .5f);
+    //}
+    //public void DestroyEnemy()
+    //{ 
+    // Destroy(gameObject);
+    //}
 }

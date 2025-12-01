@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
+using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
 
@@ -27,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
         SetHealth(amount);
         if (PHealth <= 0)
         {
-            Destroy(this.gameObject);
+            SceneManager.LoadScene("DeathScene");
 
         }
     }
