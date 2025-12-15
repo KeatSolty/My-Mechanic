@@ -11,6 +11,10 @@ public class Enemy : MonoBehaviour
 
     public GameObject spawnpoint;
 
+    public AudioSource elvisShooting;
+
+    public AudioClip ahuhuh;
+
     //public float health;
 
     //Patroling
@@ -89,6 +93,8 @@ public class Enemy : MonoBehaviour
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            elvisShooting = GetComponent<AudioSource>();
+            elvisShooting.PlayOneShot(ahuhuh);
 
 
         }
