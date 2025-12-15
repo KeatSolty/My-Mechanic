@@ -3,10 +3,16 @@ using System.Collections;
 
 public class Weapon : MonoBehaviour
 {
+    public Light glow;
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
     public float bulletVelocity = 30;
     public float bulletPrefabLifeTime = 3f;
+
+    private void Awake()
+    {
+        glow.GetComponent<Light>();
+    }
 
     void Update()
     {
@@ -24,11 +30,20 @@ public class Weapon : MonoBehaviour
 
         StartCoroutine(DestroyBulletAfterTime(bullet, bulletPrefabLifeTime));
 
+        glow.intensity = 10f;
+        StartCoroutine(changeGlow());
+
     }
 
     private IEnumerator DestroyBulletAfterTime(GameObject bullet, float delay)
     {
         yield return new WaitForSeconds(delay);
         Destroy(bullet);
+    }
+
+    private IEnumerator changeGlow()
+    {
+        yield return new WaitForSeconds(0.1f);
+        glow.intensity = 0.23f;
     }
 }

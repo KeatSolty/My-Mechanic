@@ -814,8 +814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b5bb1e6f9e84eb4ba0c0e92e5c19e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EHealth: 100
-  MaxHealth: 100
+  EHealth: 250
+  MaxHealth: 250
   healthbar: {fileID: 305011736708499193}
 --- !u!114 &7366804522150441859
 MonoBehaviour:
@@ -844,9 +844,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e0b9302b9be624280bbdf43177f0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
-  MaxHealth: 100
-  Width: 100
+  Health: 250
+  MaxHealth: 250
+  Width: 250
   Height: 100
   healthBar: {fileID: 2269132445371099058}
 --- !u!4 &7880977835884196455 stripped
