@@ -821,7 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EHealth: 250
   MaxHealth: 250
-  tpstaff: {fileID: 217149534083865275, guid: 2a77f6034a65418489314ab35c1d4cd7, type: 3}
+  tpstaff: {fileID: 217149534083865275, guid: 91792800f9c2a9944b29905ad1bd29c6, type: 3}
   healthbar: {fileID: 305011736708499193}
 --- !u!114 &7366804522150441859
 MonoBehaviour:
