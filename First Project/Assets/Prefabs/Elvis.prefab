@@ -821,6 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EHealth: 250
   MaxHealth: 250
+  scroll: {fileID: 9186572300156429416, guid: 0eb34ad6e87ae464ab206f3f29bc733c, type: 3}
   healthbar: {fileID: 305011736708499193}
 --- !u!114 &7366804522150441859
 MonoBehaviour:
