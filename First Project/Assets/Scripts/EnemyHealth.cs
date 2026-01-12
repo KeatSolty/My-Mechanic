@@ -4,7 +4,7 @@ public class EnemyHealth : MonoBehaviour
 {
 
     public float EHealth, MaxHealth = 100;
-    public GameObject scroll;
+    public GameObject tpstaff;
 
     [SerializeField]
     private EnemyHealthUI healthbar;
@@ -26,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
         SetHealth(amount);
         if (EHealth <= 0)
         {
-            Instantiate(scroll, this.transform.position, this.transform.rotation);
+            Instantiate(tpstaff, this.transform.position, this.transform.rotation);
             Destroy(this.gameObject);
 
         }
