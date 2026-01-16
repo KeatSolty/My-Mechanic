@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Bullet
   - staff
+  - End
   layers:
   - Default
   - TransparentFX
