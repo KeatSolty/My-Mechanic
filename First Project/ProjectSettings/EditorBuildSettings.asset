@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DeathScene.unity
     guid: 43871a0af689a9d4eba52720981d9e37
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 68d4608a25f3f1e4e8410121f94ff87d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
