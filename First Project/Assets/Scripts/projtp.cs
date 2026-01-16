@@ -7,7 +7,7 @@ public class projtp : MonoBehaviour
     [SerializeField] private Transform CastPoint;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Instantiate(tpproj, CastPoint.position, CastPoint.rotation);
         }
