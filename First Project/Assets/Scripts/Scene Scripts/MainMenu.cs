@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void startButton()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Lore");
     }
     public void optionsButton()
     {
