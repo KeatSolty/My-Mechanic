@@ -31,6 +31,9 @@ public class Enemy : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+
+    public Animator anim;
+
     private void Awake()
     {
         player = GameObject.Find("FirstPersonController").transform;
@@ -49,11 +52,12 @@ public class Enemy : MonoBehaviour
     }
     private void Patroling()
     {
-        if (!walkPointSet) SearchWalkPoint();
+        if (!walkPointSet) SearchWalkPoint(); anim.SetBool("PlayerInSight", false);
 
         if (walkPointSet)
-            agent.SetDestination(walkPoint);
-        
+            agent.SetDestination(walkPoint); anim.SetBool("PlayerInSight", true);
+
+
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
         //Walkpoint reached
@@ -74,6 +78,7 @@ public class Enemy : MonoBehaviour
     private void ChasePlayer()
     {
      agent.SetDestination(player.position);
+        anim.SetBool("PlayerInSight", true);
     }
     private void AttackPlayer()
     {
@@ -81,6 +86,7 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
+        anim.SetBool("PlayerInSight", false);
 
         if (!alreadyAttacked)
         {
