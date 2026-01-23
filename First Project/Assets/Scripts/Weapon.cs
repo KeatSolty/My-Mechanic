@@ -8,6 +8,7 @@ public class Weapon : MonoBehaviour
     public Transform bulletSpawn;
     public float bulletVelocity = 30;
     public float bulletPrefabLifeTime = 3f;
+    public Pmenu pmenu;
 
     private void Awake()
     {
@@ -16,7 +17,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKeyUp(KeyCode.Mouse0) && pmenu.paused == false)
         {
             FireWeapon();
         }

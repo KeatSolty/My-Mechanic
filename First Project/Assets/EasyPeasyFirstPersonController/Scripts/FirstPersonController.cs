@@ -70,6 +70,7 @@ namespace EasyPeasyFirstPersonController
         private float tiltVelocity;
         public AudioSource insidefootstep;
 
+
         public float CurrentCameraHeight => isCrouching || isSliding ? crouchCameraHeight : originalCameraParentHeight;
 
         private void Awake()
@@ -103,6 +104,8 @@ namespace EasyPeasyFirstPersonController
 
         private void Update()
         {
+
+
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask, groundCheckQueryTriggerInteraction);
             if (isGrounded && moveDirection.y < 0)
             {
@@ -294,5 +297,7 @@ namespace EasyPeasyFirstPersonController
             Cursor.lockState = newVisibility ? CursorLockMode.None : CursorLockMode.Locked;
             Cursor.visible = newVisibility;
         }
+
+
     }
 }
