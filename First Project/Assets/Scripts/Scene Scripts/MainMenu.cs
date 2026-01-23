@@ -4,17 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+    }
     public void startButton()
     {
         SceneManager.LoadScene("Lore");
-        Cursor.lockState = CursorLockMode.None;
         
     }
     public void optionsButton()
     {
         SceneManager.LoadScene("Options");
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
     }
     public void quitButton()
     { 
