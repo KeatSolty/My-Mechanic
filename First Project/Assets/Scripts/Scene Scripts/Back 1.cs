@@ -6,5 +6,7 @@ public class Back1 : MonoBehaviour
     public void BackButton1()
     {
         SceneManager.LoadScene("Menu");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

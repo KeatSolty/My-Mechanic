@@ -28,6 +28,8 @@ public class PlayerHealth : MonoBehaviour
         if (PHealth <= 0)
         {
             SceneManager.LoadScene("DeathScene");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
         }
     }

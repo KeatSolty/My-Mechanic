@@ -12,6 +12,8 @@ public class EndScene : MonoBehaviour
         if (collision.gameObject.tag == "End")
         {
             SceneManager.LoadScene("EndScreen");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
